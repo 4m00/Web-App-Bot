@@ -15,7 +15,7 @@ btn1.addEventListener("click", function(){
 		tg.MainButton.hide();
 	}
 	else {
-		tg.MainButton.setText("Приобрести AirPods Pro 2");
+		tg.MainButton.setText("Приобрести Товар 1");
 		item = "1";
 		tg.MainButton.show();
 	}
@@ -26,7 +26,7 @@ btn2.addEventListener("click", function(){
 		tg.MainButton.hide();
 	}
 	else {
-		tg.MainButton.setText("Приобрести AirPods 3");
+		tg.MainButton.setText("Приобрести Товар 2");
 		item = "2";
 		tg.MainButton.show();
 	}
