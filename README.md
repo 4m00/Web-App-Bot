@@ -46,5 +46,6 @@ To use the bot:
 ## Notes
 - Ensure that all required tokens and URLs are properly configured in the code before deployment.
 - This README file serves as a guide for understanding the bot's functionality and structure.
+- Aiogram 2.x.x version
 
 
