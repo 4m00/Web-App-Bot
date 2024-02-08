@@ -5,11 +5,11 @@ from uuid import uuid4
 import asyncio
 
 # Bot initialization
-bot = Bot(token='6443652897:AAHhUwF8ePz6xaU1SEesSkLN4vwHLiQjJ98')
+bot = Bot(token='Bot_Token')
 dp = Dispatcher(bot=bot)
 
 # WebAppInfo setup
-web_app = WebAppInfo(url='https://4m00.github.io')
+web_app = WebAppInfo(url='Site_URL')
 
 # Reply Keyboard Markup setup
 keyboard = ReplyKeyboardMarkup(
@@ -25,12 +25,12 @@ keyboard = ReplyKeyboardMarkup(
 # Handlers setup
 @dp.message_handler(Command('start'))
 async def start(message: Message):
-    await bot.send_message(message.chat.id, 'Добро пожаловать в ElecShop!', reply_markup=keyboard)
+    await bot.send_message(message.chat.id, 'Добро пожаловать в _название магазина_', reply_markup=keyboard)
 
 
 PRICE = {
-    '1': [LabeledPrice(label='AirPods Pro 2', amount=900000)],
-    '2': [LabeledPrice(label='AirPods 3', amount=800000)],
+    '1': [LabeledPrice(label='Товар 1', amount=1000000)],
+    '2': [LabeledPrice(label='Товар 2', amount=1000000)],
 }
 
 
@@ -46,7 +46,7 @@ async def buy_process(web_app_message):
     await bot.send_invoice(web_app_message.chat.id,
                            title=f'{product_name}',
                            description='Описание товара',
-                           provider_token='381764678:TEST:76833',
+                           provider_token='Trade_Token',
                            currency='rub',
                            need_email=True,
                            need_name=True,
@@ -81,7 +81,7 @@ async def reviews(message: Message):
 @dp.message_handler(lambda message: message.text.lower() == 'о нас')
 async def about_us(message: Message):
     response_text = """
-Добро пожаловать в ElecShop - ваш выбор в мире высококачественной электроники!
+Добро пожаловать в _название магазина_ - ваш выбор в мире высококачественной электроники!
 Мы стремимся предоставить клиентам лучшие продукты и отличный сервис.
 Узнайте больше о нашей компании, посетив наш тг канал.
     """
