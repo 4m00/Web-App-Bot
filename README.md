@@ -23,11 +23,13 @@ This Telegram bot is designed to facilitate the purchase of items from an online
 
 ### Python Files
 - `bot.py`: Contains the main logic of the Telegram bot, including message handlers, payment processing, and command functionalities.
+
+### JS Files
 - `app.js`: Handles the behavior of the Web App interface embedded in the Telegram chat.
-- `style.css`: Stylesheet for formatting the HTML content of the Web App.
 
 ### HTML File
 - `index.html`: The main HTML file containing the structure of the Web App interface.
+- `style.css`: Stylesheet for formatting the HTML content of the Web App.
 
 ### Other Files
 - `README.md`: This file provides an overview of the bot's functionality, structure, and usage instructions.
